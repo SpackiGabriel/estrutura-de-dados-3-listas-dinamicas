@@ -185,6 +185,13 @@ void imprime_lista(Lista* li){
     }
 }
 
+/* Lógica para trocar dois alunos de posição na lista:
+
+    - Percorrer a lista até encontrar o aluno com a matrícula correspondente (lógica de percorrer até o ponteiro nulo).
+    - Se o aluno não for encontrado ou se não houver um próximo elemento (não tem com quem trocar), retornar 0.
+    - Caso especial: Se o aluno encontrado for o primeiro da lista, trocar ele com o segundo elemento e remanejar o ponteiro que aponta para o inicio da lista.
+    - Se não, trocar o aluno com o próximo da lista, atualizando os ponteiros dos elementos ao redor.
+*/
 
 int troca(Lista* li, int mat) {
     if(li == NULL)

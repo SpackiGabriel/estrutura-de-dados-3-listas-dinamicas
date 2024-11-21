@@ -185,6 +185,13 @@ void imprime_lista(Lista* li){
     }
 }
 
+/* Lógica que pensei para buscar um aluno na lista por posição:
+
+    - Verificar se a posição é válida.
+    - Percorrer a lista até encontrar o elemento na posição desejada (A mesma lógica de sempre de chegar no ponteiro com valor NULL).
+    - Se e o ponteiro chegar no NULL, significa que a posição não for encontrada, então retorno o aluno com matrícula inválida.
+    - Caso contrário, retornar os dados do aluno encontrado na posição que o while parou.
+*/
 struct aluno busca_lista_pos(Lista* li, int pos) {
     struct aluno al;
     al.matricula = -1; // indica que a matrícula não foi encontrada

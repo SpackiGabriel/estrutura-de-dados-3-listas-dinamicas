@@ -185,6 +185,15 @@ void imprime_lista(Lista* li){
     }
 }
 
+/* Como pensei para inserir em uma posição específica:
+
+    - Verificar a posição é positiva.
+    - Cria o novo elemento.
+    - Caso especial: Se a posição for 0, inserir no início da lista (apontar a lista para o novo inicio).
+    - Se não, percorrer a lista (mesma lógica de sempre) até encontrar a posição anterior à desejada.
+    - Se a posição não for encontrada, o usuário passou uma posição que não existe na lista, então retorno 0.
+    - Caso contrário, inserir o aluno na posição correta, atualizando os ponteiros do registro anterior.
+*/
 int insere_lista_pos(Lista* li, struct aluno al, int pos) {
     if (li == NULL || pos < 0) {
         return 0;

@@ -185,6 +185,15 @@ void imprime_lista(Lista* li){
     }
 }
 
+/* Como remover um aluno pela matrícula (Enunciado pede pra remover através de um número, assumi que dava pra usar a matrícula):
+
+    - Verificar se a lista está vazia ou se a matrícula é inválida (requisito do número inteiro não negativo).
+    - Percorrer a lista para encontrar o aluno com a matrícula correspondente (ainda seguindo a lógica de chegar atpe o ponteiro nulo).
+    - Se o aluno for encontrado, chamar a função que remove o aluno da lista.
+    - Continuar percorrendo a lista até o final (o enunciado pede para "remover todos os nós que contiverem esse número inteiro", por isso continuo percorrendo a lista).
+    - Saiu do while, retorna 1 (deu boa).
+*/
+
 int remove_numero_lista(Lista* li, int mat) {
     if (lista_vazia(li) || mat < 0) {
         return 0;
